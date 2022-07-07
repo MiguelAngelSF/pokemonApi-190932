@@ -1,0 +1,19 @@
+.Header {
+  background-color: #ffffff;
+  display: flex;
+  height: 60px;
+}
+
+.Header-logo{
+  width: 210px;
+  color: rgb(0, 0, 0);
+}
+
+.Header-logo img {
+  width: 90px;
+  margin-left: 55px;
+}
+
+h2{
+  color: #000000;
+}
