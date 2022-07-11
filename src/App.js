@@ -26,16 +26,16 @@ function App() {
       content = <PokeFun />;
   }
   return (
-    <div>
-      <Header view={view} onNav={handleNavigation} />
-      {content}
-    </div>
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<PokeFun/>}/>
-    //     <Route path="/buscador" element={<PokemonApi/>}/>
-    //   </Routes>
-    // </BrowserRouter>
+    // <div>
+    //   <Header view={view} onNav={handleNavigation} />
+    //   {content}
+    // </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PokeFun/>}/>
+        <Route path="/buscador" element={<PokemonApi/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

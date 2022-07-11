@@ -55,20 +55,24 @@ class PokemonApi extends React.Component{
   render() {
           return (
           <div className="card text-center">
-          <div className="card-body">
-          <form onSubmit={this.handleSubmit}>    
-              <input 
-                  class="form-control"
-                  placeholder="Ingresa nombre o ID"
-                  type="text"
-                  value={this.state.name}
-                  onChange={this.handleName}
-              />
-              <br/>
-              <button type="submit" className="btn btn-primary">Search</button>            
-          </form>
-                <img src={this.state.img} alt=""/>   
-                <img src={this.state.img2} alt=""/>
+            <div className="card-body">
+              <form onSubmit={this.handleSubmit}>    
+                <input 
+                    class="form-control"
+                    placeholder="Ingresa nombre o ID"
+                    type="text"
+                    value={this.state.name}
+                    onChange={this.handleName}
+                />
+                <br/>
+                <button type="submit" className="btn btn-primary">Search</button>            
+              </form> 
+            </div>
+            <div className="card text-center">
+              <div className="card-body">
+                    <img src={this.state.img} alt=""/>   
+                    <img src={this.state.img2} alt=""/>
+              </div>
             </div>
           </div>
           );
