@@ -1,5 +1,6 @@
 import React from "react";
-const Card = ({ pokemon, loading}) => {
+import { Link } from 'react-router-dom';
+const Card = ({ pokemon, loading, infoPoke}) => {
     return (
         <>
         {
@@ -10,11 +11,13 @@ const Card = ({ pokemon, loading}) => {
                 pokemon.map((item) => {
                     return (
                         <>
-                            <div className="card" key={item.id}>
+                            <Link to="/pokemonId">
+                            <div className="card" key={item.id} onClick={()=>infoPoke(item)}>
                                 <h2>{item.id}</h2>
                                 <img src={item.sprites.front_default} alt="" />
                                 <h2>{item.name}</h2>
                             </div>
+                            </Link>
                         </>
                     )
                 })

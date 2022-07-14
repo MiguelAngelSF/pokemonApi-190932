@@ -1,6 +1,8 @@
 import React from "react";
+import  Navbar  from './navbar';
+// import { useTranslation } from 'react-i18next';
+// import { changeLanguage } from 'i18next';
 class PokemonApi extends React.Component{
-  
     constructor(props) {
       super(props);
       this.state = {
@@ -51,15 +53,20 @@ class PokemonApi extends React.Component{
       })
       event.preventDefault()
     }
+
   
   render() {
+      
           return (
+          <div>
+            <Navbar/>
           <div className="card text-center">
+            
             <div className="card-body">
               <form onSubmit={this.handleSubmit}>    
                 <input 
                     class="form-control"
-                    placeholder="Ingresa nombre o ID"
+                    placeholder="ID "
                     type="text"
                     value={this.state.name}
                     onChange={this.handleName}
@@ -74,6 +81,7 @@ class PokemonApi extends React.Component{
                     <img src={this.state.img2} alt=""/>
               </div>
             </div>
+          </div>
           </div>
           );
       }

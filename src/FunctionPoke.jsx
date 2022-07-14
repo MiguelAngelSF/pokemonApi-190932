@@ -1,8 +1,10 @@
 import React from "react";
 import Card from "./Card";
 import axios from "axios";
+import InfoPoke  from "./InfoPoke";
 import { useState } from "react";
 import { useEffect } from "react";
+import  Navbar  from './navbar';
 
 const PokeFun=()=>{
     const [pokeData,setPokeData]=useState([]);
@@ -35,9 +37,11 @@ const PokeFun=()=>{
     },[url])
     return(
         <>
+        <div>
+            <Navbar/>
             <div className="container">
                 <div className="left-content">
-                    <Card pokemon={pokeData} loading={loading}/>
+                    <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
                     
                     <div className="btn-group">
                         {  prevUrl && <button onClick={()=>{setPokeData([])
@@ -49,6 +53,7 @@ const PokeFun=()=>{
                         }}>Next</button>}
                     </div>
                 </div>
+              </div>
             </div>
         </>
     )
