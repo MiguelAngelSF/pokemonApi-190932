@@ -61,12 +61,11 @@ class PokemonApi extends React.Component{
           <div>
             <Navbar/>
           <div className="card text-center">
-            
             <div className="card-body">
               <form onSubmit={this.handleSubmit}>    
                 <input 
                     class="form-control"
-                    placeholder="ID "
+                    placeholder="Ingrese nombre o ID"
                     type="text"
                     value={this.state.name}
                     onChange={this.handleName}
@@ -77,8 +76,7 @@ class PokemonApi extends React.Component{
             </div>
             <div className="card text-center">
               <div className="card-body">
-                    <img src={this.state.img} alt=""/>   
-                    <img src={this.state.img2} alt=""/>
+                    <img src={this.state.img} width="130" height="130" alt="Pokemon" />   
               </div>
             </div>
           </div>

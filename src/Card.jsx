@@ -11,13 +11,13 @@ const Card = ({ pokemon, loading, infoPoke}) => {
                 pokemon.map((item) => {
                     return (
                         <>
-                            <Link to="/pokemonId">
+                            {/* <Link to="/pokemon"> */}
                             <div className="card" key={item.id} onClick={()=>infoPoke(item)}>
                                 <h2>{item.id}</h2>
                                 <img src={item.sprites.front_default} alt="" />
                                 <h2>{item.name}</h2>
                             </div>
-                            </Link>
+                            {/* </Link> */}
                         </>
                     )
                 })

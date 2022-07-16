@@ -3,5 +3,7 @@
   "title": "Proyecto Pokemon Miguel",
   "nav-item-bus": "Buscador",
   "nav-item-info": "190932-Informacion",
-  "nav-item-place": "Ingresa nombre o ID"
+  "nav-item-place": "Ingresa nombre o ID",
+  "btnNext": "Siguiente",
+  "btnBack": "Atras"
 }

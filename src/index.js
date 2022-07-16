@@ -4,7 +4,7 @@ import App from './App';
 import PokeFun from './FunctionPoke';
 import PokemonApi from './buscador';
 import About from './190932';
-import InfoPoke from './InfoPoke';
+import Context from './context';
 import { BrowserRouter as Router,Routes, Route, Navigate } from "react-router-dom"
 import { I18nextProvider } from "react-i18next";
 import i18n from "./config/localization/i18n";
@@ -18,7 +18,7 @@ root.render(
           <Route path='pokemon' element={<PokeFun/>}/>
           <Route path='buscador' element={<PokemonApi/>}/>
           <Route path='190932' element={<About/>}/>
-          <Route path='pokemonId' element={<InfoPoke/>}/>
+          <Route path='context' element={<Context/>}/>
           <Route path='/' element={<Navigate replace to="/pokemon"/>} />
       </Routes>
     </Router>
